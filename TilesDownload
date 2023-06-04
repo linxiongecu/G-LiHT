@@ -3,12 +3,14 @@
 echo "Here is a String" | grep -Po '(?<=(Here )).*(?= String)'
 ##get project name
 wget -O - https://glihtdata.gsfc.nasa.gov/files/G-LiHT/  | grep -Po '(?<=(href=")).*(?=(/">FL))'> filenames.txt
+### only Florida project
 
 ### https://glihtdata.gsfc.nasa.gov/files/G-LiHT/FL_20171202_Keys_FIA2/lidar/shp/tiles/FL_20171202_Keys_FIA2_tiles_shp.tar.gz
 
 
 ####download
 ######
+#### FL_20171202_Keys_FIA2
 
 input="filenames.txt"
 while IFS= read -r line
